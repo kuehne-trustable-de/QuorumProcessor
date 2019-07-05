@@ -180,10 +180,10 @@ public class QuorumProcessor {
 			byte[] pwArr = derivedPasswordMap.get(i);
 			newParts.add(pwArr);
 
-			log.info("currentIndex " + currentIndex + ", pushing pw " + bytesToHex(pwArr));
-
 			if( level == N) {
-				
+
+				log.info("currentIndex " + currentIndex + ", pushing pw " + bytesToHex(pwArr));
+
 				MessageDigest digest = MessageDigest.getInstance("SHA-256");
 				log.debug("parts has #" + newParts.size() + " elements");
 				for( byte[] bArr: newParts) {
