@@ -182,12 +182,12 @@ public class QuorumProcessor {
 
 			if( level == N) {
 
-				log.info("currentIndex " + currentIndex + ", pushing pw " + bytesToHex(pwArr));
+//				log.debug("currentIndex " + currentIndex + ", pushing pw " + bytesToHex(pwArr));
 
 				MessageDigest digest = MessageDigest.getInstance("SHA-256");
 				log.debug("parts has #" + newParts.size() + " elements");
 				for( byte[] bArr: newParts) {
-					log.debug("digest pw " + bytesToHex(pwArr));
+//					log.debug("digest pw " + bytesToHex(pwArr));
 					digest.update(bArr);
 				}
 				
@@ -251,8 +251,8 @@ public class QuorumProcessor {
 		PasswordContext pwCtx = pwCtxMap.get(n);
 		byte[] bArr = hashPassword(password, pwCtx.getAuthSalt(), PBKDF_ITERATIONS, PBKDF_LENGTH);
 		if( !Arrays.equals(bArr, pwCtx.getAuthResult())) {
-			log.info("testPassword for key " + n + "': " + bArr.length + " / " + pwCtx.getAuthResult().length );
-			log.info("testPassword for key " + n + "': " + bArr.length + " " + pwCtx);
+			log.debug("testPassword for key " + n + "': " + bArr.length + " / " + pwCtx.getAuthResult().length );
+			log.debug("testPassword for key " + n + "': " + bArr.length + " " + pwCtx);
 			
 			throw new GeneralSecurityException("password mismatch");
 		}
