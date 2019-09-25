@@ -4,7 +4,7 @@
 
   <groupId>de.trustable.ca3s</groupId>
   <artifactId>QuorumProcessor</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>QuorumProcessor</name>
@@ -17,8 +17,8 @@
 	<maven.compiler.target>1.8</maven.compiler.target>
 
     <jaxb-version>2.3.1</jaxb-version>
-    <jackson-version>2.9.9</jackson-version>
-    <jackson-databind-version>2.9.9.2</jackson-databind-version>
+    <jackson-version>2.9.10</jackson-version>
+    <jackson-databind-version>2.9.10</jackson-databind-version>
     <slf4j-version>1.7.26</slf4j-version>
     <junit-version>4.8.2</junit-version>
   </properties>
@@ -83,14 +83,14 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>trustable.eu</id>
 			<name>trustable Repository</name>
-			<url>https://trustable.eu/artifactory/sirius</url>
+			<url>https://trustable.eu/artifactory/ca3s</url>
 			<layout>default</layout>
 		</repository>
 		<snapshotRepository>
 			<uniqueVersion>true</uniqueVersion>
 			<id>Snap_trustable.eu</id>
-			<name>trustables Snapshots</name>
-			<url>https://trustable.eu/artifactory/sirius</url>
+			<name>trustable Snapshots</name>
+			<url>https://trustable.eu/artifactory/ca3s</url>
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>

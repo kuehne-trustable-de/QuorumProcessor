@@ -1,6 +1,5 @@
 package de.trustable.ca3s.quorumProcessor;
 
-import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.InvalidParameterException;
 import java.security.MessageDigest;
@@ -36,10 +35,10 @@ public class QuorumProcessor {
 	int keyLength;
 	
 	@JsonProperty
-	Map<Integer,PasswordContext> pwCtxMap;
+	HashMap<Integer,PasswordContext> pwCtxMap;
 
 	@JsonProperty
-	Map<String, byte[]> quorumKeyMap;
+	HashMap<String, byte[]> quorumKeyMap;
 	
 	@JsonProperty
 	byte[] groupedPasswordSalt = {0,1,2,3,4};
